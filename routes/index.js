@@ -5,6 +5,7 @@ const Car = require("../models/Car");
 // Buscar vehiculos y mostrarlos en la página inicial
 router.get("/", async (req, res) => {
   try {
+    console.log("Mostrando página de inicio");
     const cars = await Car.find();
     res.render("index", { cars });
   } catch (err) {
